@@ -1,0 +1,285 @@
+/* Font Family "Inter" 400 / 700/ 800 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+  /* Primary */
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+
+  /* Nuetral */
+
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+.burger-menu {
+  visibility: hidden;
+  position: absolute;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', serif;
+  font-size: 17px;
+
+  line-height: 1.5rem;
+  color: var(--dark-grayish-blue);
+}
+
+.wrapper {
+  margin: 5rem auto;
+  max-width: 1440px;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.menu-items {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+  padding: 0.5rem 0.5rem;
+}
+
+.menu-items a:hover {
+  color: var(--soft-red);
+}
+
+.spotlight {
+  display: grid;
+  grid-gap: 40px 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hero-image {
+  grid-column: span 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-title {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.hero-blurb {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.new-stories {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  background-color: var(--very-dark-blue);
+  padding: 2rem 1.5rem;
+  min-height: 100%;
+}
+
+.story-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.box {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.box a {
+  color: var(--off-white);
+  text-decoration: none;
+}
+
+.box a:hover {
+  color: var(--soft-orange);
+}
+
+.story-boxes h2 {
+  margin-bottom: 1rem;
+  color: var(--off-white);
+  font-size: 1.2rem;
+}
+
+.story-boxes p {
+  color: var(--grayish-blue);
+}
+
+.story-boxes hr {
+  border: 1px solid var(--dark-grayish-blue);
+  border-bottom: none;
+}
+
+.new-stories-title {
+  color: var(--soft-orange);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  color: var(--very-dark-blue);
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+.hero-btn a {
+  color: var(--off-white);
+  text-decoration: none;
+  background-color: var(--soft-red);
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  font-size: 1.3rem;
+}
+
+.hero-btn a:hover {
+  background-color: var(--very-dark-blue);
+}
+
+.hero-blurb p {
+  margin-bottom: 75px;
+}
+
+.top-three-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.9rem;
+  margin-top: 100px;
+}
+
+.article-card {
+  display: flex;
+  gap: 30px;
+  height: 175px;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.article-content h2 {
+  color: var(--grayish-blue);
+  font-size: 2rem;
+}
+
+.article-content a {
+  text-decoration: none;
+  color: var(--very-dark-blue);
+}
+
+.article-content a:hover {
+  color: var(--soft-red);
+}
+
+/* MEDIA QUERIES */
+
+/* 1025 - 1200 */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .story-boxes h2 {
+    margin-bottom: 0;
+  }
+
+  .top-three-articles {
+    margin-top: 75px;
+  }
+}
+
+/* 769px — 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .new-stories {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    padding: 2rem 1.5rem;
+  }
+
+  .spotlight {
+    display: grid;
+    grid-gap: 40px 30px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero-title {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .hero-blurb {
+    grid-column: 3 / 5;
+    grid-row: 2;
+  }
+
+  .hero-blurb p {
+    margin-bottom: 50px;
+  }
+
+  .hero-image {
+    grid-column: span 4;
+  }
+}
+/* > 769px */
+@media (max-width: 769px) {
+  .new-stories {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    padding: 2rem 1.5rem;
+    margin-top: 40px;
+  }
+
+  .spotlight {
+    display: grid;
+    grid-gap: 40px 0px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero-title {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+  }
+
+  .hero-blurb {
+    grid-column: 1 / span 4;
+    grid-row: 3;
+  }
+
+  .hero-blurb p {
+    margin-bottom: 50px;
+  }
+
+  .hero-image {
+    grid-column: span 4;
+  }
+
+  .menu-items {
+    position: relative;
+    visibility: hidden;
+    gap: 0;
+  }
+
+  .burger-menu {
+    visibility: visible;
+    position: absolute;
+    right: 17px;
+  }
+}
