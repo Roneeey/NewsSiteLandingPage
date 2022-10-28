@@ -14,6 +14,7 @@
   --very-dark-blue: hsl(240, 100%, 5%);
 }
 
+/*  HIDDEN ELEMENTS */
 .burger-menu {
   visibility: hidden;
   position: absolute;
@@ -250,7 +251,7 @@ body {
   .spotlight {
     display: grid;
     grid-gap: 40px 0px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(85px, 1fr));
   }
 
   .hero-title {
@@ -273,13 +274,15 @@ body {
 
   .menu-items {
     position: relative;
-    visibility: hidden;
+    display: none;
     gap: 0;
   }
 
   .burger-menu {
     visibility: visible;
     position: absolute;
+    justify-content: end;
     right: 17px;
+    position: fixed;
   }
 }
