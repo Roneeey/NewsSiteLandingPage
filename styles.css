@@ -241,6 +241,10 @@ body {
 }
 /* > 769px */
 @media (max-width: 769px) {
+  .wrapper {
+    margin: 0;
+  }
+
   .new-stories {
     grid-column: 1 / -1;
     grid-row: 4;
